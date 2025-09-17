@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grocery WebApp Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap + Custom CSS -->
+  <link rel="stylesheet" href="ui/css/bootstrap.min.css">
+  <style>
+    body {
+      background: url('https://images.unsplash.com/photo-1542838132-92c53300491e') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+    .overlay {
+      background: rgba(0,0,0,0.6);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .navbar {
+      background: rgba(0,0,0,0.8) !important;
+    }
+    .dashboard {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: rgb(242, 236, 236);
+      text-align: center;
+      padding: 20px;
+      margin-top: -50px;
+    }
+    .dashboard h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .btn-lg {
+      font-size: 1.2rem;
+      padding: 12px 30px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark">
+      <a class="navbar-brand" href="index.html">🛒 Grocery Store</a>
+    </nav>
+
+    <!-- Dashboard content -->
+    <div class="dashboard">
+      <h1>Welcome to Dashboard</h1>
+      <div>
+        <a href="order.html" class="btn btn-success btn-lg">➕ New Order</a>
+        <a href="manage-product.html" class="btn btn-primary btn-lg">📦 Manage Products</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="ui/js/jquery.min.js"></script>
+  <script src="ui/js/bootstrap.min.js"></script>
+</body>
+</html>

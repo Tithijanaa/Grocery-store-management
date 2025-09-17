@@ -1,0 +1,22 @@
+# Python
+_pycache_/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# MySQL credentials (optional if sensitive)
+# backend/sql_connection.py

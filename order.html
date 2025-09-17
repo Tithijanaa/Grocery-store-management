@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GSMS - Orders</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="ui/css/bootstrap.min.css">
+
+  <style>
+    body {
+      background: linear-gradient(to right, #00c6ff, #0072ff); /* greeny-blue gradient */
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .navbar {
+      background: rgba(0,0,0,0.8) !important;
+    }
+    .form-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      margin-top: 40px;
+    }
+    label {
+      color: #fff;
+      font-weight: bold;
+    }
+    .btn-primary {
+      background-color: #28a745;
+      border: none;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .btn-primary:hover {
+      background-color: #218838;
+    }
+    .thank-you {
+      margin-top: 20px;
+      padding: 15px;
+      background: rgba(40, 167, 69, 0.9);
+      border-radius: 10px;
+      text-align: center;
+      display: none; /* hidden by default */
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark">
+      <a class="navbar-brand" href="index.html">🛒 Grocery Store</a>
+      <a href="manage-product.html" class="btn btn-outline-light btn-sm">Manage Products</a>
+    </nav>
+
+    <!-- Order Form -->
+    <div class="container">
+      <div class="form-container">
+        <h2 class="text-center">Place New Order</h2>
+        <form id="orderForm">
+          <div class="form-group">
+            <label>Customer Name</label>
+            <input type="text" class="form-control" placeholder="Enter name" required>
+          </div>
+          <div class="form-group">
+            <label>Order Items</label>
+            <select class="form-control" required>
+              <option value="">-- Select a Vegetable --</option>
+              <option value="Potato">🥔 Potato</option>
+              <option value="Onion">🧅 Onion</option>
+              <option value="Tomato">🍅 Tomato</option>
+              <option value="Carrot">🥕 Carrot</option>
+              <option value="Spinach">🌿 Spinach</option>
+              <option value="Cauliflower">🥦 Cauliflower</option>
+              <option value="Cabbage">🥬 Cabbage</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit Order</button>
+        </form>
+
+        <!-- Thank You Message -->
+        <div id="thankYouMsg" class="thank-you">
+          🎉 Thank you! Your order has been placed successfully.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="ui/js/jquery.min.js"></script>
+  <script src="ui/js/bootstrap.min.js"></script>
+  <script>
+    // Show popup + thank you message when form is submitted
+    document.getElementById("orderForm").addEventListener("submit", function(e){
+      e.preventDefault(); // prevent actual submit
+      alert("✅ Order Submitted Successfully!");
+      document.getElementById("thankYouMsg").style.display = "block"; // show thank you
+      this.reset(); // clear form after submit
+    });
+  </script>
+</body>
+</html>
